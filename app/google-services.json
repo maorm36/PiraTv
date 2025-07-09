@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "481447204426",
+    "project_id": "piratv-21b11",
+    "storage_bucket": "piratv-21b11.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481447204426:android:6c28b13d9ab8521cbdb8b3",
+        "android_client_info": {
+          "package_name": "com.example.piratv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz-V4Ns4LOdPpOIUqhmnCxqnu4w892NvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

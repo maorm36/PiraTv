@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/purple_gradient_background"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/header_fav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Favorite picks"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+
+        <!-- Movies Section -->
+        <TextView
+            android:id="@+id/header_fav_movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favorite Movies"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerFavoritesMovies"
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager"/>
+
+        <TextView
+            android:id="@+id/placeholder_no_movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You haven’t added any movies yet."
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            android:visibility="gone"
+            android:paddingBottom="24dp"/>
+
+        <!-- TV Series Section -->
+        <TextView
+            android:id="@+id/header_fav_series"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favorite TV Series"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerFavoritesSeries"
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager"/>
+
+        <TextView
+            android:id="@+id/placeholder_no_series"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You haven’t added any series yet."
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            android:visibility="gone"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

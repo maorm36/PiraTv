@@ -1,0 +1,223 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_view_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/purple_gradient_background"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/mainLinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_menu_launcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/hamburger_menu"
+                app:backgroundTint="#D40098"
+                app:fabCustomSize="58dp"
+                app:tint="@android:color/white" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Search Movies or TV series"
+                app:boxBackgroundColor="#1A1A1A"
+                app:boxBackgroundMode="filled"
+                app:boxCornerRadiusBottomEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusTopStart="24dp"
+                app:boxStrokeColor="@android:color/transparent"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintTextAppearance="@style/TextAppearance.Material3.TitleSmall"
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@android:drawable/ic_menu_search">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/search_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:inputType="text"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Category & Filter Buttons -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:paddingVertical="8dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/efab_trending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="Trending"
+                    android:textColor="@color/white"
+                    app:backgroundTint="#D40098"
+                    app:iconTint="@android:color/white" />
+
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/efab_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="Action"
+                    android:textColor="@color/white"
+                    app:backgroundTint="#D40098"
+                    app:iconTint="@android:color/white" />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/efab_comedy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="Comedy"
+                    android:textColor="@color/white"
+                    app:backgroundTint="#D40098"
+                    app:iconTint="@android:color/white" />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/efab_drama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="DRAMA"
+                    android:textColor="@color/white"
+                    app:backgroundTint="#D40098"
+                    app:iconTint="@android:color/white" />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/efab_animation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="ANIMATION"
+                    android:textColor="@color/white"
+                    app:backgroundTint="#D40098"
+                    app:iconTint="@android:color/white" />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/efab_crime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="CRIME"
+                    android:textColor="@color/white"
+                    app:backgroundTint="#D40098"
+                    app:iconTint="@android:color/white" />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/efab_documentary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="DOCUMENTARY"
+                    android:textColor="@color/white"
+                    app:backgroundTint="#D40098"
+                    app:iconTint="@android:color/white" />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/efab_kids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="KIDS"
+                    android:textColor="@color/white"
+                    app:backgroundTint="#D40098"
+                    app:iconTint="@android:color/white" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <!--  Movies Carousel  -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Browse Movies"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/carousel_movies"
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager" />
+        <!--  Series Carousel  -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Browse TV Series"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/carousel_series"
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager" />
+        <!--  Channels Carousel  -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Browse Live TV Channels"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/carousel_channels"
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

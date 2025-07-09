@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@android:color/white">
+
+    <!-- You can swap this for an avatar ImageView if you like -->
+    <TextView
+        android:id="@+id/textCommentUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="User ID"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/textCommentRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⭐ 0/10"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/textCommentBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comment..."
+        android:layout_marginTop="4dp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/textCommentWhen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Timestamp..."
+        android:layout_marginTop="4dp"
+        android:textColor="@android:color/black"/>
+
+</LinearLayout>
