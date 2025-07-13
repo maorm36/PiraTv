@@ -7,20 +7,15 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.transition.Visibility
 import com.bumptech.glide.Glide
 import com.example.piratv.apis.RetrofitClientTheMoviesDB
 import com.example.piratv.apis.TheMoviesDBAPI
 import com.example.piratv.databinding.ActivityPreviewItemBinding
 import com.example.piratv.models.Comment
-import com.example.piratv.models.SearchResponse
 import com.example.piratv.models.SearchResponseTvSeries
 import com.example.piratv.models.SeasonInfo
-import com.example.piratv.models.TitleResult
 import com.example.piratv.ui.adapters.CommentsAdapter
-import com.example.piratv.ui.adapters.SearchResultAdapter
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.CollectionReference
@@ -75,7 +70,8 @@ class PreviewItemActivity : AppCompatActivity() {
                     seasonsList.clear()
 
                     for (season in seasons) {
-                        seasonsList.add(season.seasonNumber)
+                        if(season.seasonNumber != 0)
+                            seasonsList.add(season.seasonNumber)
                     }
                 }
 

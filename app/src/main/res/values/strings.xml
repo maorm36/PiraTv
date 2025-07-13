@@ -18,7 +18,8 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="not_registered_text">"New to PiraTV? to Sign up <u>click here"</u></string>
-    <string name="registered_text">"Already Signed up? <u>Click Here"</u></string>
-    <string name="forget_psw_text">"forgot your password? <u>Click Here"</u></string>
+    <string name="not_registered_text">"New to PiraTV? to Sign up"</string>
+    <string name="registered_text">"Already Signed up?"</string>
+    <string name="forget_psw_text">"forgot your password?"</string>
+    <string name="click_here"><u>"Click Here"</u></string>
 </resources>
