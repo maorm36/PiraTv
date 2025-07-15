@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.piratv.MainActivity
 import com.example.piratv.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
