@@ -35,19 +35,19 @@ Pira-TV is an Android streaming app that brings together movies, TV series and l
 
 ## Architecture & Packages
 
-com.example.piratv
-├── ui
-│ ├── auth # LoginActivity, RegisterActivity, LogoffFragment
-│ ├── home # HomeFragment + carousels
-│ ├── search # SearchSummaryActivity, SearchResultAdapter
-│ ├── previewItem # PreviewItemActivity (play URLs)
-│ ├── profile # ProfileFragment (account info, settings)
-│ ├── favorites # FavoritesFragment (watchlist)
-│ └── settings # App Settings Fragment
-├── adapters # RecyclerView adapters
-├── models # Data classes: Movie, Series, Channel, FeaturedItem, TitleResult, SearchResponse…
-├── apis # Retrofit interfaces (TMDBApi…)
-└── MainActivity # Drawer + Navigation host
+com.example.piratv <br>
+├── ui <br>
+│ ├── auth # LoginActivity, RegisterActivity, LogoffFragment <br>
+│ ├── home # HomeFragment + carousels <br>
+│ ├── search # SearchSummaryActivity, SearchResultAdapter <br>
+│ ├── previewItem # PreviewItemActivity (play URLs) <br>
+│ ├── profile # ProfileFragment (account info, settings) <br>
+│ ├── favorites # FavoritesFragment (watchlist) <br>
+│ └── settings # App Settings Fragment <br>
+├── adapters # RecyclerView adapters <br>
+├── models # Data classes: Movie, Series, Channel, FeaturedItem, TitleResult, SearchResponse… <br>
+├── apis # Retrofit interfaces (TMDBApi…) <br>
+└── MainActivity # Drawer + Navigation host <br>
 
 ---
 
@@ -133,9 +133,9 @@ Sync Gradle in Android Studio
 
 Run on an Android device or emulator
 
-Min SDK: …
+Min SDK: 30
 
-Target SDK: …
+Target SDK: 34
 
 ---
 
