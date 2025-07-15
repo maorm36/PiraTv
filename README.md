@@ -21,7 +21,7 @@ Pira-TV is an Android streaming app that brings together movies, TV series and l
 - **Content browsing**  
   Horizontal carousels & grids for Movies, TV-Series & Channels  
 - **Search**  
-  Query for movies and TV-series  
+  Query for movies and TV-series in any language
 - **Filter by Categories**  
   “Action”, “Comedy”, “Trending Now”, etc.  
 - **Kids mode**  
@@ -29,7 +29,17 @@ Pira-TV is an Android streaming app that brings together movies, TV series and l
 - **Favorites**  
   Save favorite movies and TV-series to watch later  
 - **Account Management**  
-  Sign in / Sign up via Firebase Auth; reset password via email, delete account  
+  Sign in / Sign up via Firebase Auth
+  Users can change their password
+  Users can delete their account  
+- **Comments**  
+  Users can add their own comments to an item (such as a movie)  
+- **Rating**  
+  Users can rate each item (such as a movie) on a scale of one to five stars, and the average of all submitted ratings is displayed.  
+- **Forgot Password**  
+  The “Forgot Password” feature lets users quickly reset their password by sending a secure reset link to their registered email address.   
+- **Servers switch**
+  Users can effortlessly switch between multiple streaming servers to find sources that offer their chosen content with built-in subtitles to choose if exists.
 
 ---
 
@@ -86,7 +96,7 @@ App-wide preferences (e.g. parental control).
 ---
 
 ## APIs & Services
-TMDB / IMDb REST via Retrofit + Gson
+TMDB / IMDb REST API via Retrofit + Gson
 
 kotlin
 Copy
