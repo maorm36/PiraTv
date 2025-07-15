@@ -38,7 +38,7 @@ Pira-TV is an Android streaming app that brings together movies, TV series and l
   Users can rate each item (such as a movie) on a scale of one to five stars, and the average of all submitted ratings is displayed.  
 - **Forgot Password**  
   The “Forgot Password” feature lets users quickly reset their password by sending a secure reset link to their registered email address.   
-- **Servers switch**
+- **Servers switch** <br>
   Users can effortlessly switch between multiple streaming servers to find sources that offer their chosen content with built-in subtitles to choose if exists.
 
 ---
