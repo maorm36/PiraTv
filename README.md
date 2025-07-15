@@ -29,9 +29,9 @@ Pira-TV is an Android streaming app that brings together movies, TV series and l
 - **Favorites**  
   Save favorite movies and TV-series to watch later  
 - **Account Management**  
-  Sign in / Sign up via Firebase Auth
-  Users can change their password
-  Users can delete their account  
+  Sign in / Sign up via Firebase Auth <br>
+  Users can change their password <br>
+  Users can delete their account <br>  
 - **Comments**  
   Users can add their own comments to an item (such as a movie)  
 - **Rating**  
