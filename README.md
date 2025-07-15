@@ -1,155 +1,161 @@
-Pira-TV
-Pira-TV is an Android streaming app that brings together movies, TV series and live TV channels into one place—serving as a semi-replacement for cables.
+# Pira-TV
 
+Pira-TV is an Android streaming app that brings together movies, TV series and live israeli news channels into one place—serving as a semi-replacement for cables.
 
-Table of Contents
-Features
+---
 
-Architecture & Packages
+## Table of Contents
 
-Key Classes & Components
+- [Features](#features)  
+- [Architecture & Packages](#architecture--packages)  
+- [Key Classes & Components](#key-classes--components)  
+- [APIs & Services](#apis--services)  
+- [UI/UX & Layouts](#uiux--layouts)  
+- [Installation & Configuration](#installation--configuration)  
+- [Future Plans](#future-plans)  
 
-Data Models
+---
 
-APIs & Services
+## Features
 
-UI/UX & Layouts
+- **Content browsing**  
+  Horizontal carousels & grids for Movies, TV-Series & Channels  
+- **Search**  
+  Query for movies and TV-series in any language
+- **Filter by Categories**  
+  “Action”, “Comedy”, “Trending Now”, etc.  
+- **Kids mode**  
+  Parental control for avoiding adult content  
+- **Favorites**  
+  Save favorite movies and TV-series to watch later  
+- **Account Management**  
+  Sign in / Sign up via Firebase Auth <br>
+  Users can change their password <br>
+  Users can delete their account <br>  
+- **Comments**  
+  Users can add their own comments to an item (such as a movie)  
+- **Rating**  
+  Users can rate each item (such as a movie) on a scale of one to five stars, and the average of all submitted ratings is displayed.  
+- **Forgot Password**  
+  The “Forgot Password” feature lets users quickly reset their password by sending a secure reset link to their registered email address.   
+- **Servers switch** <br>
+  Users can effortlessly switch between multiple streaming servers to find sources that offer their chosen content with built-in subtitles to choose if exists.
 
-Installation & Configuration
+---
 
-Future Plans
+## Architecture & Packages
 
-License
+com.example.piratv <br>
+├── ui <br>
+│ ├── auth # LoginActivity, RegisterActivity, LogoffFragment <br>
+│ ├── home # HomeFragment + carousels <br>
+│ ├── search # SearchSummaryActivity, SearchResultAdapter <br>
+│ ├── previewItem # PreviewItemActivity (play URLs) <br>
+│ ├── profile # ProfileFragment (account info, settings) <br>
+│ ├── favorites # FavoritesFragment (watchlist) <br>
+│ └── settings # App Settings Fragment <br>
+├── adapters # RecyclerView adapters <br>
+├── models # Data classes: Movie, Series, Channel, FeaturedItem, TitleResult, SearchResponse… <br>
+├── apis # Retrofit interfaces (TMDBApi…) <br>
+└── MainActivity # Drawer + Navigation host <br>
 
+---
 
+## Key Classes & Components
 
-Features:
-Content browsing: Horizontal carousels & grids for Movies, TV-Series & Channels
-
-Search: Query for Movies and TV-Series
-
-Filter by Categories: “Action”, “Comedy”, “Trending Now”, etc.
-
-Kids mode: parental control for avoiding adult content
-
-Favorites: Save titles to watch later
-
-Account Management: Sign in / Sign up via Firebase Auth; reset password, delete account
-
-
-
-Architecture & Packages:
-com.example.piratv
-├── ui
-│   ├── auth           # LoginActivity, RegisterActivity, LogoffFragment
-│   ├── home           # HomeFragment + carousels
-│   ├── search         # SearchSummaryActivity, SearchResultAdapter
-│   ├── previewItem    # PreviewItemActivity (play URLs)
-│   ├── profile        # ProfileFragment (account info, settings)
-│   ├── favorites      # FavoritesFragment (watchlist)
-│   └── settings       # App Settings Fragment
-├── adapters           # RecyclerView & ViewPager2 adapters
-├── models             # Data classes: Movie, Series, Channel, FeaturedItem, TitleResult, SearchResponse…
-├── apis               # Retrofit interfaces (ImdbApi, TMDBApi…)
-├── binding            # Generated view-binding classes
-└── MainActivity       # Drawer + Navigation host
-Key Classes & Components
-MainActivity
+### `MainActivity`
 Hosts the NavHostFragment, drawer menu and FAB to open navigation.
 
-HomeFragment
-Displays three carousels (ViewPager2 or custom Material carousel) for featured movies, series and live channels.
+### `HomeFragment`
+Displays three carousels for featured movies, series and live channels.
 
-MovieCarouselAdapter / SeriesCarouselAdapter / ChannelCarouselAdapter
-Populate each carousel; handle item clicks via Toast or navigation.
+### Carousel Adapters
+- **MovieCarouselAdapter**  
+- **SeriesCarouselAdapter**  
+- **ChannelCarouselAdapter**  
+  Populate each carousel and handle item clicks.
 
-SearchSummaryActivity
+### `SearchSummaryActivity`
 Fires TMDB/IMDb REST call and shows results in a RecyclerView grid.
 
-SearchResultAdapter
+### `SearchResultAdapter`
 Loads poster images using Glide into grid items.
 
-PreviewItemActivity
+### `PreviewItemActivity`
 Builds and launches the correct embed URL based on content type and source.
 
-ProfileFragment
-Displays user email, name, member-since; offers safe-search toggle, password reset, account deletion and log out.
+### `ProfileFragment`
+Displays user email, name, member-since; offers safe-search toggle, password reset, account deletion, and log out.
 
-FavoritesFragment
+### `FavoritesFragment`
 Placeholder for watchlist; to be extended with local DB or Firebase.
 
-SettingsFragment
-(Not shown) for app-wide preferences.
+### `SettingsFragment`
+App-wide preferences (e.g. parental control).
 
-Data Models
+---
+
+## APIs & Services
+TMDB / IMDb REST API via Retrofit + Gson
+
 kotlin
 Copy
 Edit
-// com.example.piratv.models.Movie
-data class Movie(val id: String, val title: String, val imageUrl: String)
+@GET("search/multi")
+fun searchTitles(...): Call<SearchResponse>
 
-// com.example.piratv.models.Series
-data class Series(val id: String, val title: String, val imageUrl: String)
+@GET("tv/{id}")
+fun getSeriesDetails(@Path("id") id: Int): Call<SearchResponseTvSeries>
+Authentication
+FirebaseAuth for email/password sign-in & user management
 
-// com.example.piratv.models.Channel
-data class Channel(val id: String, val title: String, val imageUrl: String)
+Image Loading
+Glide
 
-// com.example.piratv.models.FeaturedItem
-data class FeaturedItem(val title: String, val description: String, val srcImage: String, val id: String? = null, val type: String? = null)
+Note: Store your API key in apikeys.properties (ignored by Git) and reference it via BuildConfig.API_KEY_THEMOVIEDB.
 
-// com.example.piratv.models.TitleResult & SearchResponse
-data class TitleResult(val id: String, val title: String, val image: String, val year: Int)
-data class SearchResponse(val results: List<TitleResult>)
-APIs & Services
-TMDB / IMDb REST via Retrofit + Gson converter
+---
 
-@GET("search/multi") fun searchTitles(...)
-
-@GET("tv/{id}") fun getSeriesDetails(...)
-
-Authentication: FirebaseAuth for email/password sign-in & user management
-
-Image Loading: Glide
-
-Remember to store your API_KEY in local.properties (ignored by Git) and reference it via BuildConfig.AUTH_KEY.
-
-UI/UX & Layouts
+## UI/UX & Layouts
 Material 3 components (Cards, TextInputLayout, SwitchMaterial, ShapeableImageView)
 
 View Binding for type-safe view access
 
-Carousels: ViewPager2 with CompositePageTransformer or Material CarouselLayoutManager
+Carousels: Material CarouselLayoutManager
 
 Search Bar at top of HomeFragment
 
 Floating Action Button to open navigation drawer
 
-Installation & Configuration
+---
+
+## Installation & Configuration
 Clone this repository
 
-Add your API key to local.properties:
+Add your AUTH_KEY & API key to the matching variables in apikeys.properties:
 
-ini
+properties
 Copy
 Edit
-tmdb_api_key="YOUR_TMDB_API_KEY"
+API_KEY_THEMOVIEDB="YOUR_TMDB_API_KEY"
+AUTH_KEY="YOUR_TMDB_AUTH_KEY"
 Sync Gradle in Android Studio
 
-Run on an Android device or emulator (min SDK …, target SDK …)
+Run on an Android device or emulator
 
-Future Plans
-Add subtitle support (Hebrew)
+Min SDK: 30
 
-Integrate Firebase Realtime/Firestore for watchlists
+Target SDK: 34
+
+---
+
+## Future Plans
 
 Improve recommendations (collaborative filtering)
 
-Offline caching of posters & recently watched
-
 Ads / billing integration (optional)
 
-License
-This project is released under the MIT License.
-Feel free to fork and contribute!
+---
 
-Built with ❤️ by Maor Mordo
+## Built with ❤️ by Maor Mordo
+
