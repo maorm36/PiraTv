@@ -14,4 +14,4 @@
 .cxx
 
 # apikeys.properties need in the future to be placed here in order to protect the API_KEYS
-# apikeys.properties
+apikeys.properties
