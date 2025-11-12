@@ -158,10 +158,8 @@ Ads / billing integration (optional)
 ---
 
 ## IMAGES 
-<img width="720" height="720" alt="image" src="https://github.com/user-attachments/assets/39b47533-9fe7-4b04-8b33-b93a69424646" />
-<img width="720" height="720" alt="image" src="https://github.com/user-attachments/assets/8aa1ba70-e5ce-49e1-af07-2ad4ba136701" />
-<img width="720" height="720" alt="image" src="https://github.com/user-attachments/assets/24a74cf4-e081-4923-8914-80ae9ec244f7" />
-<img width="720" height="720" alt="image" src="https://github.com/user-attachments/assets/a0705728-fab6-473e-ab5d-9132b59c0e64" />
+<img width="300" alt="signin" src="https://github.com/user-attachments/assets/39b47533-9fe7-4b04-8b33-b93a69424646" /><img width="300" alt="main" src="https://github.com/user-attachments/assets/8aa1ba70-e5ce-49e1-af07-2ad4ba136701" />
+<img width="300" alt="search" src="https://github.com/user-attachments/assets/24a74cf4-e081-4923-8914-80ae9ec244f7" /><img width="720" alt="item" src="https://github.com/user-attachments/assets/a0705728-fab6-473e-ab5d-9132b59c0e64" />
 
 
 ## Built with ❤️ by Maor Mordo
