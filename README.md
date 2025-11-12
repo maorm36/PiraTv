@@ -162,6 +162,9 @@ Ads / billing integration (optional)
 
 <img width="300" alt="search" src="https://github.com/user-attachments/assets/24a74cf4-e081-4923-8914-80ae9ec244f7" />  <img width="300" alt="item" src="https://github.com/user-attachments/assets/a0705728-fab6-473e-ab5d-9132b59c0e64" />
 
+<img width="300" alt="movie" src="https://github.com/user-attachments/assets/5d3b15fb-3b03-45ac-94e5-b708fc64b395" />
+
+
 
 ## Built with ❤️ by Maor Mordo
 
